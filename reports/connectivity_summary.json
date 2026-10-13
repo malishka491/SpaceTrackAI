@@ -1,0 +1,15 @@
+{
+  "baseline": {
+    "nodes": 33910,
+    "edges": 21043,
+    "components": 12915,
+    "largest_component_nodes": 470
+  },
+  "simulated_after_flagged_links_removed": {
+    "nodes": 33452,
+    "edges": 20621,
+    "components": 12876,
+    "largest_component_nodes": 456
+  },
+  "warning": "Scenario only: flagged roads are not confirmed flooded or closed."
+}

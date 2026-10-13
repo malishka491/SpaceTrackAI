@@ -52,6 +52,27 @@ c2.metric("Roads flagged", f"{len(flagged):,}")
 c3.metric("Suspect pixels", f"{total_suspect:,}")
 c4.metric("Suspect share", "2.49%")
 
+summary_path = Path("reports/connectivity_summary.json")
+if summary_path.exists():
+    import json
+    connectivity = json.loads(summary_path.read_text())
+    baseline = connectivity["baseline"]
+    simulated = connectivity["simulated_after_flagged_links_removed"]
+
+    st.subheader("Road Network Connectivity — Scenario Analysis")
+    st.caption(
+        "Simulation only: provisionally flagged roads are removed from the graph; "
+        "this does not mean these roads are confirmed flooded or closed."
+    )
+    n1, n2, n3 = st.columns(3)
+    n1.metric("Baseline components", f'{baseline["components"]:,}')
+    n2.metric("Scenario components", f'{simulated["components"]:,}')
+    n3.metric(
+        "Largest component (nodes)",
+        f'{baseline["largest_component_nodes"]:,} → '
+        f'{simulated["largest_component_nodes"]:,}'
+    )
+
 st.warning(
     "Preliminary low-backscatter screening only. These pixels and roads are "
     "not confirmed flood detections or verified damaged roads. Calibration "
