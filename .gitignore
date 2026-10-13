@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+*.log
+data/raw/
+data/processed/sentinel1/
+data/processed/snap/*.img
+data/processed/snap/*.dim
+data/processed/snap/*.data/
+data/processed/georeferenced/
