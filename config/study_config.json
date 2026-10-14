@@ -1,0 +1,23 @@
+
+{
+  "study_id": "trishuli_20260909",
+  "study_area": "Trishuli River Corridor, Nepal",
+  "event_date": "2026-09-09",
+  "pre_event_date": "2026-08-28",
+  "post_event_date": "2026-09-09",
+  "aoi": {
+    "west": 84.799923,
+    "south": 27.699997,
+    "east": 85.300035,
+    "north": 28.100007
+  },
+  "satellite": {
+    "mission": "Sentinel-1",
+    "polarizations": ["VV", "VH"],
+    "relative_orbit": 85
+  },
+  "terrain": {
+    "dem_path": "data/processed/terrain/trishuli_dem.tif",
+    "source": "SRTM"
+  }
+}
